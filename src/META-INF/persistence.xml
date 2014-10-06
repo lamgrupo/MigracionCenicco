@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="MigracionCeniccoOracle" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.lam.cenicco.migracion.entidades.oracle.CatalogoGeneralOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.CiudadOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.CompaniaOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.EmpleadoOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.EstadoOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.GrupoPagoOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.MunicipioOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.PaisOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.PuestoOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.RegistroPatronalOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.RelacionLaboralOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.TipoRelacionLaboralOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.DepartamentoOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.PosicionOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.PosicionSueldoOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.TurnoOracle</class>
+    <class>com.lam.cenicco.migracion.entidades.oracle.AsentamientoOracle</class>
+    <validation-mode>NONE</validation-mode>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//192.168.1.250:1521/CENICCO"/>
+      <property name="javax.persistence.jdbc.password" value="PRUEBA01"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.user" value="prueba"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="MigracionCeniccoMysql" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Admcompaniatb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Admdepartamentotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Admpuestotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Admregistropatronaltb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Catasentamientotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Catbancotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Catciudadtb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Catestadotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Catgeneraltb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Catmunicipiotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Catpaistb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Cattipoasentamientotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Nomgrupopagotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhempleadocontactotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhempleadodomiciliotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhempleadotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhposicionsueldoestatustb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhposicionsueldohtb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhposicionsueldotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhrelacionlaboralcuentatb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhrelacionlaboralposiciontb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhrelacionlaboraltb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhtipocontactotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhtiporelacionlaboraltb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Rhtiposueldotb</class>
+    <class>com.lam.cenicco.migracion.entidades.mysql.Taturnotb</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cenicco?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="admin"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+    </properties>
+  </persistence-unit>
+</persistence>
